@@ -1,2 +1,4 @@
 # Parking-Control-API
-Projeto Springboot de uma estacionamento.
+Projeto Springboot 
+
+API referente a uma vaga de estacionamento.
