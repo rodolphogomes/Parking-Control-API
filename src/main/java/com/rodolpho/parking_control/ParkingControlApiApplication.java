@@ -17,5 +17,4 @@ public class ParkingControlApiApplication {
 	public String index() {
 		return "Olá Mundo!";
 	}
-
 }
