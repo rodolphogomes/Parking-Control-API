@@ -5,7 +5,6 @@ import jakarta.validation.constraints.Size;
 
 public class ParkingSpotDto {
 	
-	
 	@NotBlank
 	private String parkingSpotNumber;
 	@NotBlank
