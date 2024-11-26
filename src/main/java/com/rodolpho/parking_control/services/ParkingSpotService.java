@@ -1,5 +1,7 @@
 package com.rodolpho.parking_control.services;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.rodolpho.parking_control.models.ParkingSpotModel;
@@ -32,5 +34,9 @@ public class ParkingSpotService {
 
 	public boolean existsApartmentAndBlock(String apartment, String block) {
 		return parkingSpotRepository.existsByApartmentAndBlock(apartment, block);
+	}
+
+	public List<ParkingSpotModel> findAll() {
+		return parkingSpotRepository.findAll();
 	}
 }
