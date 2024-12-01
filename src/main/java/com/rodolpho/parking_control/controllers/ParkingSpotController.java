@@ -7,6 +7,9 @@ import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.BeanUtils;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -55,7 +58,7 @@ public class ParkingSpotController {
 	}
 	
 	@GetMapping
-	public ResponseEntity<List<ParkingSpotModel>> getAllParkingSpots(){
+	public ResponseEntity<List<ParkingSpotModel>> getAllParkingSpots(@PageableDefault(page = 0, size = 10, sort = "id", direction = Sort.Direction.ASC) Pageable pageable){
 		return ResponseEntity.status(HttpStatus.OK).body(parkingSpotService.findAll());
 	}
 	
